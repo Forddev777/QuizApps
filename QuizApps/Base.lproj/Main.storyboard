@@ -16,45 +16,53 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="Background-Bubbles" translatesAutoresizingMaskIntoConstraints="NO" id="oXQ-1J-Gnw">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background-Bubbles" translatesAutoresizingMaskIntoConstraints="NO" id="oXQ-1J-Gnw">
                                 <rect key="frame" x="0.0" y="794" width="414" height="102"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="102" id="7Tk-Qj-RUe"/>
                                 </constraints>
                             </imageView>
-                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" distribution="fillProportionally" spacing="76" translatesAutoresizingMaskIntoConstraints="NO" id="d2P-8p-CQU">
-                                <rect key="frame" x="20" y="44" width="374" height="431.5"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="tEO-BH-3OG">
+                                <rect key="frame" x="20" y="44" width="374" height="818"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Quiz? Text" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ov7-PT-zyX">
-                                        <rect key="frame" x="0.0" y="0.0" width="374" height="33.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="618"/>
                                         <fontDescription key="fontDescription" name="HoeflerText-Black" family="Hoefler Text" pointSize="31"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KJh-cB-6ix">
-                                        <rect key="frame" x="0.0" y="109.5" width="374" height="80"/>
+                                        <rect key="frame" x="0.0" y="628" width="374" height="80"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="80" id="iGJ-72-yRi"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                        <inset key="titleEdgeInsets" minX="20" minY="0.0" maxX="0.0" maxY="0.0"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                         <state key="normal" title="True" backgroundImage="Rectangle">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <connections>
+                                            <action selector="answerBtnPress:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ntt-gL-nSB"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rD3-PU-mnk">
-                                        <rect key="frame" x="0.0" y="265.5" width="374" height="80"/>
+                                        <rect key="frame" x="0.0" y="718" width="374" height="80"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="80" id="eBr-Dh-sne"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                        <inset key="titleEdgeInsets" minX="20" minY="0.0" maxX="0.0" maxY="0.0"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                         <state key="normal" title="False" backgroundImage="Rectangle">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <connections>
+                                            <action selector="answerBtnPress:" destination="BYZ-38-t0r" eventType="touchUpInside" id="LU0-SJ-Bxc"/>
+                                        </connections>
                                     </button>
                                     <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="q6x-el-hCq">
-                                        <rect key="frame" x="0.0" y="421.5" width="374" height="10"/>
+                                        <rect key="frame" x="0.0" y="808" width="374" height="10"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="10" id="ulZ-zU-DqU"/>
                                         </constraints>
@@ -65,7 +73,22 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" red="0.42492330854283483" green="0.22162116633754989" blue="0.72328756313131315" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="oXQ-1J-Gnw" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="98V-Te-Vnf"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="tEO-BH-3OG" secondAttribute="bottom" id="Svf-7Q-shh"/>
+                            <constraint firstItem="tEO-BH-3OG" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="bx6-r0-f51"/>
+                            <constraint firstAttribute="bottom" secondItem="oXQ-1J-Gnw" secondAttribute="bottom" id="cfd-34-hrA"/>
+                            <constraint firstItem="oXQ-1J-Gnw" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="cth-iX-Kn5"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="tEO-BH-3OG" secondAttribute="trailing" id="jay-aq-NDV"/>
+                            <constraint firstItem="tEO-BH-3OG" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="vkr-Z3-r5a"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="falseBtn" destination="rD3-PU-mnk" id="GHn-eX-wCm"/>
+                        <outlet property="progressbar" destination="q6x-el-hCq" id="7p1-qP-rsO"/>
+                        <outlet property="questionLabel" destination="ov7-PT-zyX" id="874-vN-pk3"/>
+                        <outlet property="trueBtn" destination="KJh-cB-6ix" id="LAl-Yf-DMk"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
