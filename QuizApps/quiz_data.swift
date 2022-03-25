@@ -8,9 +8,17 @@
 import Foundation
 
 
-struct quiz_name {
+struct town {
+    let name: String
+    var citizens: [String]
+    var resource: [String: Int]
     
-         let question = ""
-         
+    
+    init(townName: String , citizens:[String] , resource: [String: Int ]){
+        self.name = townName
+        self.citizens = citizens
+        self.resource = resource
+        
+    }
 
 }
